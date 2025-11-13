@@ -75,7 +75,6 @@
          display: block;
       }
 
-      /* Imagen principal */
       .principal {
          width: 100%;
          max-height: 700px;
@@ -84,7 +83,6 @@
          background-color: #017f99;
       }
 
-      /* Cuadro del enlace al ayuntamiento */
       .ayuntamiento {
          background: #005f73;
          color: white;
@@ -103,7 +101,6 @@
          transform: scale(1.05);
       }
 
-      /* Estilo del buscador */
       form {
          display: flex;
          align-items: center;
@@ -134,6 +131,37 @@
       input[type="submit"]:hover {
          background: #00b4d8;
       }
+
+      /* --- NUEVO: Botones adicionales --- */
+      .extras {
+         margin-top: 30px;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         gap: 15px;
+      }
+
+      .boton {
+         background: #005f73;
+         color: white;
+         padding: 12px 20px;
+         border-radius: 8px;
+         text-decoration: none;
+         font-weight: bold;
+         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+         transition: background 0.3s, transform 0.3s;
+      }
+
+      .boton:hover {
+         background: #00b4d8;
+         transform: scale(1.05);
+      }
+
+      .imagen-extra {
+         width: 300px;
+         border-radius: 10px;
+         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      }
    </style>
 </head>
 
@@ -142,7 +170,6 @@
       <nav>
          <ul>
             <li>
-               <!-- Logo con video -->
                <a href="#" onclick="reproducirVideo()">
                   <img src="logoss.png" width="130" height="130" alt="Logo CECYTEM" style="border-radius: 10px;">
                </a>
@@ -156,7 +183,7 @@
             </li>
 
             <li><p><a href="ciudadanoo.html">CIUDADANO</a></p></li>
-   <img src="111.jpg" alt="Imagen del ciudadano">
+            <img src="111.jpg" alt="Imagen del ciudadano">
 
             <li>
                <p><a href="TRAMITE.HTML">TRÁMITE</a></p>
@@ -196,18 +223,21 @@
                   <li><a href="index2.php">Registro</a></li>
                </ul>
             </li>
+
             <li>
                <p><a href="menu8.HTML">OPCIONES DE PAGO Y UBICACIÓN</a></p>
                <ul>
                   <li><a href="menu8.HTML">Ver Opciones</a></li>
                </ul>
             </li>
+
             <li>
                <p><a href="informacion.html">INFORMACIÓN</a></p>
                <ul>
                   <li><a href="informacion.html">Más Información</a></li>
                </ul>
             </li>
+
             <li>
                <a href="index3.php">
                   <img src="defis.png" alt="Ir al formulario" width="130" height="130" style="cursor:pointer; border-radius: 10px;">
@@ -221,12 +251,24 @@
       <p>
          <a href="https://share.google/Q5YCviwYntzpR3B4T" class="ayuntamiento">PORTAL AYUNTAMIENTO VALLE DE BRAVO</a>
       </p>
+
+      <!-- 🔹 NUEVA SECCIÓN CON TUS ELEMENTOS -->
+      <div class="extras">
+         <!-- Botón para reproducir video -->
+         <a href="#" class="boton" onclick="mostrarVideo()">🎥 Ver Video</a>
+
+         <!-- Botón para descargar el documento -->
+         <a href="documento1.pdf" class="boton" download>📄 Descargar Documento</a>
+
+         <!-- Imagen adicional -->
+         <img src="imagenextra.jpg" alt="Imagen adicional" class="imagen-extra">
+      </div>
    </center>
-      <center>
+
    <script>
       function reproducirVideo() {
          const video = document.createElement("video");
-         video.src = "video5.mp4"; // Cambia por el nombre de tu video
+         video.src = "video5.mp4";
          video.controls = true;
          video.autoplay = true;
          video.style.width = "80%";
@@ -235,8 +277,19 @@
          document.body.innerHTML = "";
          document.body.appendChild(video);
       }
-   </script></center>
+
+      // 🔹 Función para mostrar tu nuevo video (vide444.mp4)
+      function mostrarVideo() {
+         const video = document.createElement("video");
+         video.src = "vide444.mp4";
+         video.controls = true;
+         video.autoplay = true;
+         video.style.width = "80%";
+         video.style.borderRadius = "15px";
+         video.style.margin = "20px auto";
+         document.body.innerHTML = "";
+         document.body.appendChild(video);
+      }
    </script>
 </body>
-
 </html>
