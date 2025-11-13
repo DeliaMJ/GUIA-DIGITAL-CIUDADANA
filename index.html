@@ -156,12 +156,6 @@
          background: #00b4d8;
          transform: scale(1.05);
       }
-
-      .imagen-extra {
-         width: 300px;
-         border-radius: 10px;
-         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-      }
    </style>
 </head>
 
@@ -183,7 +177,6 @@
             </li>
 
             <li><p><a href="ciudadanoo.html">CIUDADANO</a></p></li>
-            <img src="111.jpg" alt="Imagen del ciudadano">
 
             <li>
                <p><a href="TRAMITE.HTML">TRÁMITE</a></p>
@@ -246,22 +239,17 @@
          </ul>
       </nav>
 
+      <!-- Mantiene solo esta imagen principal -->
       <img src="111.jpg" alt="Imagen principal" class="principal">
 
       <p>
          <a href="https://share.google/Q5YCviwYntzpR3B4T" class="ayuntamiento">PORTAL AYUNTAMIENTO VALLE DE BRAVO</a>
       </p>
 
-      <!-- 🔹 NUEVA SECCIÓN CON TUS ELEMENTOS -->
+      <!-- 🔹 Sección con botones -->
       <div class="extras">
-         <!-- Botón para reproducir video -->
          <a href="#" class="boton" onclick="mostrarVideo()">🎥 Ver Video</a>
-
-         <!-- Botón para descargar el documento -->
          <a href="documento1.pdf" class="boton" download>📄 Descargar Documento</a>
-
-         <!-- Imagen adicional -->
-         <img src="imagenextra.jpg" alt="Imagen adicional" class="imagen-extra">
       </div>
    </center>
 
@@ -278,7 +266,6 @@
          document.body.appendChild(video);
       }
 
-      // 🔹 Función para mostrar tu nuevo video (vide444.mp4)
       function mostrarVideo() {
          const video = document.createElement("video");
          video.src = "vide444.mp4";
