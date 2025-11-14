@@ -132,7 +132,7 @@
          background: #00b4d8;
       }
 
-      /* --- NUEVO: Botones adicionales --- */
+      /* --- Botones adicionales --- */
       .extras {
          margin-top: 30px;
          display: flex;
@@ -155,6 +155,48 @@
       .boton:hover {
          background: #00b4d8;
          transform: scale(1.05);
+      }
+
+      /* -----------------------------------------
+         🔹 CÓDIGO RESPONSIVO DE LA PROFA
+         ----------------------------------------- */
+      @media (max-width: 600px) {
+
+         body {
+            padding: 10px;
+         }
+
+         nav ul li a {
+            padding: 10px 12px;
+            font-size: 0.9em;
+         }
+
+         form {
+            width: 100%;
+            justify-content: center;
+         }
+
+         input[type="search"] {
+            width: 120px;
+         }
+
+         .principal {
+            max-height: 300px;
+         }
+
+         .ayuntamiento {
+            display: block;
+            text-align: center;
+         }
+
+         .extras {
+            width: 100%;
+         }
+
+         video, iframe {
+            width: 100% !important;
+            height: 200px !important;
+         }
       }
    </style>
 </head>
@@ -239,14 +281,12 @@
          </ul>
       </nav>
 
-      <!-- Mantiene solo esta imagen principal -->
       <img src="111.jpg" alt="Imagen principal" class="principal">
 
       <p>
          <a href="https://share.google/Q5YCviwYntzpR3B4T" class="ayuntamiento">PORTAL AYUNTAMIENTO VALLE DE BRAVO</a>
       </p>
 
-      <!-- 🔹 Sección con botones -->
       <div class="extras">
          <a href="#" class="boton" onclick="mostrarVideo()">🎥 Ver Video</a>
          <a href="documento1.pdf" class="boton" download>📄 Descargar Documento</a>
