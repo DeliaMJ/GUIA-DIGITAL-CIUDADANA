@@ -2,8 +2,11 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <!-- Código de la profa (ya incluido correctamente) -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Guía Digital Ciudadana de Trámites</title>
+
     <style>
         /* ======== ESTILO GENERAL ======== */
         body {
@@ -117,8 +120,29 @@
             border: 1px solid #ddd;
             margin-top: 15px;
         }
+
+        /* ===============================
+           CÓDIGO DE LA PROFA (ANEXADO)
+           =============================== */
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            main {
+                padding: 10px;
+            }
+            h1, h2 {
+                font-size: 1.2em;
+                text-align: center;
+            }
+            iframe {
+                width: 100%;
+                height: 200px;
+            }
+        }
     </style>
 </head>
+
 <body>
 
     <header>
@@ -155,13 +179,12 @@
                 Consejo: Verifica siempre que tus datos estén actualizados antes de iniciar cualquier trámite en línea o presencial.
             </div>
         </section>
-         <section>
+
+        <section>
             <h2>¿Qué son los Trámites Ciudadanos?</h2>
             <p>Los trámites ciudadanos son los procesos mediante los cuales las personas pueden obtener documentos, permisos, registros o servicios ante las instituciones del gobierno. Estos trámites son esenciales para garantizar la identidad, la legalidad y el acceso a derechos como la educación, la salud, el trabajo y la movilidad.</p>
 
             <p>Gracias al avance tecnológico, muchos de estos trámites se pueden realizar de forma digital, evitando filas y reduciendo tiempos de espera. Sin embargo, es importante conocer los pasos correctos y la documentación necesaria para cada proceso.</p>
-
-
         </section>
 
         <section>
@@ -205,11 +228,17 @@
             <p>Puedes pagar tus servicios en ventanilla o en línea desde los portales oficiales. Guarda siempre tu comprobante para cualquier aclaración o reembolso posterior.</p>
         </section>
 
-       
- <p>Tramites y servicios en linea disponibles en nuestra pagina, los podras ver a continuacion en el video</p>
+        <p>Trámites y servicios en línea disponibles en nuestra página, los podrás ver a continuación en el video:</p>
 
-        </section>
+        <!-- CÓDIGO DE LA PROFA: VIDEO IFRAME INSERTADO -->
+        <iframe 
+            src="https://drive.google.com/file/d/1RZGn1exEzVRpIlT90DCpiEJrS5y4hzOb/preview"
+            allow="autoplay; encrypted-media"
+            title="Video desde Google Drive">
+        </iframe>
+
     </main>
-</body>
 
+</body>
 </html>
+
