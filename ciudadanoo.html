@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <center>
+    <title>Ciudadano - Conoce tus derechos y deberes</title>
+</center>
+    <!-- Fuente moderna desde Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --color-primario: #c47fa6;
+            --color-texto: #333;
+            --color-acento: #c47fa6;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #fff;
+            color: var(--color-texto);
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(90deg, var(--color-primario), #a86491);
+            color: white;
+            text-align: center;
+            padding: 1.5rem 1rem;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+        }
+
+        header h1 {
+            font-family: 'Merriweather', serif;
+            font-size: 2rem;
+            margin-bottom: 0.3rem;
+        }
+
+        header p {
+            font-size: 1rem;
+            margin: 0;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 1.5rem auto;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: var(--color-primario);
+            border-left: 5px solid var(--color-acento);
+            padding-left: 10px;
+            font-size: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin: 0.5rem 0 1rem 1rem;
+            list-style-type: "✔ ";
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .video-container {
+            text-align: center;
+            margin: 1.5rem 0;
+        }
+
+        iframe {
+            width: 60%;
+            height: 350px;
+            border-radius: 10px;
+            border: 2px solid var(--color-acento);
+        }
+
+        .frase {
+            background-color: #f9f9f9;
+            border-left: 5px solid var(--color-acento);
+            padding: 12px;
+            font-style: italic;
+            margin: 20px 0;
+            border-radius: 6px;
+        }
+
+        footer {
+            text-align: center;
+            background: var(--color-primario);
+            color: white;
+            padding: 1rem;
+            margin-top: 2rem;
+            font-size: 0.95rem;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        img {
+            display: block;
+            margin: 10px auto;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>El Ciudadano: Derechos, Deberes y Participación</h1>
+        <p>Conoce tu papel en la sociedad y cómo puedes contribuir al bienestar común</p>
+    </header>
+
+    <main>
+        <h2>¿Qué es un ciudadano?</h2>
+        <li><img src="ciu2.jpg" width="200" height="200" alt="Ciudadano"></li>
+        <p>
+            Un <strong>ciudadano</strong> es toda persona que pertenece legalmente a un Estado y que posee derechos y obligaciones dentro de él. 
+            Ser ciudadano no solo significa tener una nacionalidad, sino también participar activamente en la construcción de una sociedad justa, 
+            democrática y solidaria. 
+        </p>
+        <p>
+            La ciudadanía es el vínculo que une a una persona con su país, y que le permite formar parte de la vida política, económica, social y cultural. 
+            Un buen ciudadano busca el bien común, respeta las normas, participa en la toma de decisiones y promueve valores como la solidaridad, la justicia y la empatía.
+        </p>
+
+        <h2>Derechos del ciudadano</h2>
+        <p>Los derechos del ciudadano garantizan su libertad, igualdad y seguridad dentro del Estado. Entre los más importantes se encuentran:</p>
+        <li>Derecho a la libertad de expresión, pensamiento y religión.</li>
+        <li>Derecho a la educación, la salud y la seguridad social.</li>
+        <li>Derecho a participar en elecciones y procesos democráticos.</li>
+        <li>Derecho a la igualdad ante la ley y a no ser discriminado.</li>
+        <li>Derecho a vivir en un entorno limpio, sano y sostenible.</li>
+        <li>Derecho a la información y a la participación ciudadana.</li>
+
+        <h2>Deberes del ciudadano</h2>
+        <p>
+            Los deberes son las responsabilidades que cada ciudadano debe cumplir para mantener el orden, la justicia y el progreso social. 
+            Algunos de los principales son:
+        </p>
+        <li>Respetar las leyes y las autoridades legítimas.</li>
+        <li>Contribuir con el pago de impuestos.</li>
+        <li>Cuidar el medio ambiente y los bienes públicos.</li>
+        <li>Participar en la comunidad y en procesos democráticos.</li>
+        <li>Promover el respeto, la tolerancia y la paz social.</li>
+        <li>Educarse y mantenerse informado para ejercer una ciudadanía responsable.</li>
+
+        <div class="frase">
+            “Ser ciudadano no se trata solo de tener derechos, sino de cumplir con los deberes que hacen posible una sociedad más justa y solidaria.”
+        </div>
+
+        <div class="video-container">
+            <h2>Video educativo sobre la ciudadanía</h2>
+            <iframe 
+                src="videociudadano.mp4" 
+                title="Video educativo sobre ciudadanía"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <h2>Importancia de la participación ciudadana</h2>
+        <p>
+            La participación ciudadana es esencial para fortalecer la democracia y construir un país mejor. 
+            Cuando los ciudadanos se involucran en decisiones públicas, proponen soluciones y exigen transparencia, 
+            se mejora la calidad de vida y se impulsa el desarrollo sostenible. 
+        </p>
+        <li><img src="ciu.jpg" width="200" height="200" alt="Participación ciudadana"></li>
+
+        <p>
+            La educación cívica y el respeto por los derechos humanos son pilares fundamentales de una ciudadanía activa. 
+            Un ciudadano informado, crítico y solidario contribuye a formar comunidades más seguras, inclusivas y justas.
+        </p>
+    </main>
+
+    <footer>
+        <p>© 2025 Tu Sitio Web | Creado con orgullo por [Delia Martinez]</p>
+    </footer>
+
+</body>
+</html>
