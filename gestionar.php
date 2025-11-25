@@ -1,0 +1,273 @@
+    <!DOCTYPE html>
+<html lang="es">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Página de Trámites</title>
+
+   <!-- Fuente moderna -->
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+   <style>
+      body {
+         font-family: 'Poppins', sans-serif;
+         background-color: #f9fafc;
+         margin: 0;
+         padding: 0;
+      }
+
+      nav {
+         background-color: #1b4965;
+         padding: 15px 0;
+         text-align: center;
+      }
+
+      ul {
+         list-style: none;
+         padding: 0;
+         margin: 0;
+      }
+
+      li {
+         display: inline-block;
+         position: relative;
+         margin: 0 15px;
+      }
+
+      p, a {
+         text-decoration: none;
+         color: #ffffff;
+         font-weight: 600;
+         transition: color 0.3s ease;
+      }
+
+      a:hover {
+         color: #ffd60a;
+      }
+
+      ul ul {
+         display: none;
+         position: absolute;
+         background-color: #2c7da0;
+         border-radius: 5px;
+         padding: 10px;
+         list-style: none;
+      }
+
+      li:hover ul {
+         display: block;
+      }
+
+      ul ul li {
+         display: block;
+         margin: 5px 0;
+      }
+
+      ul ul li a {
+         color: #ffffff;
+         font-weight: 500;
+      }
+
+      ul ul li a:hover {
+         color: #ffd60a;
+      }
+   </style>
+</head>
+
+<body>
+   <!--menu principal-->
+   <nav>
+      <ul>
+          <form method="get" action="https://www.google.com/search" target="_blank">
+    <input type="search" name="q" placeholder="Introducir búsqueda" autofocus required>
+    <input type="submit">
+         <!--elemento simple sin subtema-->
+         
+         <!--Elemento con subtema-->
+         <li>
+            <p><a href="https://gobmx.page/ActaNacimiento/">ACTA</a></p> <!--Flecha indicando subtema-->
+            <ul>
+               <li><a href="https://www.gob.mx/ActaNacimiento/folioSeguimiento/">ACTA FOLIO</a></li>
+            </ul>
+         </li>
+
+         <li>
+            <p><a href="https://www.gob.mx/curp/">CURP</a></p> <!--Flecha indicando subtema-->
+         </li>
+
+         <li>
+            <p><a href="https://smovilidad.edomex.gob.mx/licencias">LICENCIA</a></p>
+            <ul>
+               <li><a href="https://smovilidad.edomex.gob.mx/citas_internet">AGENDAR CITA</a></li>
+            </ul>
+         </li>
+
+         <li>
+            <p><a href="https://www.sat.gob.mx/portal/public/home">SAT</a></p> <!--Flecha indicando subtema-->
+            <ul>
+               <li><a href="https://citas.sat.gob.mx/">AGENDAR CITA</a></li>
+               <li><a href="https://share.google/kg2M34giuzqjyeFCn">RFC</a></li>
+               <li><a href="https://www.sat.gob.mx/portal/public/tramites/constancia-de-situacion-fiscal">CONSTANCIA DE SITUACION FISCAL</a></li>
+               <li><a href="https://www.sat.gob.mx/portal/public/tramites/declaraciones-pf">DECLARACION PERSONAS FISICAS</a></li>
+            </ul>
+         </li>
+
+         <li>
+            <p><a href="https://share.google/bEhPbZOFD9ReqhYrG">REGISTRO CIVIL</a></p> <!--Flecha indicando subtema-->
+         </li>
+        
+
+         <li>
+            <p><a href="https://www.gob.mx/pasaporte/">PASAPORTE</a></p> <!--Flecha indicando subtema-->
+         </li>
+
+      </ul>
+   </nav>
+
+
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentos importantes</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* 💗 Colores pastel y tipografía redondeada */
+    :root {
+      --color-fondo: #fff6f9;
+      --color-tarjeta: #ffffff;
+      --color-acento: #f8b6c2;
+      --color-acento-suave: #ffe0e6;
+      --color-texto: #444;
+      --color-titulo: #ff6f91;
+      --sombra: 0 4px 10px rgba(255, 182, 193, 0.25);
+      --radio: 15px;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--color-fondo);
+      color: var(--color-texto);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px 20px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    header h1 {
+      color: var(--color-titulo);
+      font-size: 28px;
+      margin-bottom: 5px;
+    }
+
+    header p {
+      color: #777;
+      font-size: 15px;
+    }
+
+    .contenedor {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      max-width: 1100px;
+      width: 100%;
+    }
+
+    .tarjeta {
+      background-color: var(--color-tarjeta);
+      border-radius: var(--radio);
+      box-shadow: var(--sombra);
+      padding: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .tarjeta:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 20px rgba(255, 182, 193, 0.3);
+    }
+
+    .tarjeta img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: var(--radio);
+      margin-bottom: 15px;
+      background-color: var(--color-acento-suave);
+    }
+
+    .tarjeta h2 {
+      color: var(--color-titulo);
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    .tarjeta p {
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 13px;
+      color: #999;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+   </body>
+</html>
+
+    <h1>✨ Documentos importantes ✨</h1>
+    <p>Información breve y clara sobre algunos documentos oficiales en México.</p>
+  </header>
+
+  <main class="contenedor">
+    <div class="tarjeta">
+      <img src="ACTADENACIMIENTO.JPG">
+      <h2>⁕ACTA DE NACIMIENTO</h2>
+      <h2>Es el documento que certifica tu nacimiento, tus datos personales y de tus padres. Sirve como prueba legal de tu identidad.</h2>
+    </div>
+
+    <div class="tarjeta">
+      <img src="CURP1.jpg">
+      <h2>⁕CURP</h2>
+      <h2>La CURP (Clave Única de Registro de Población) te identifica oficialmente en todo México. Se usa en escuelas, trabajos y trámites.</h2>
+    </div>
+
+    <div class="tarjeta">
+      <img src="licenciadeconducir.jpg">
+      <h2>⁕LICENCIA DE CONDUCIR</h2>
+      <h2>Documento que te autoriza a manejar un vehículo. También puede usarse como identificación oficial.</h2>
+    </div>
+
+    <div class="tarjeta">
+      <img src="sat.jpg">
+      <h2>⁕SAT</h2>
+      <h2>El SAT (Servicio de Administración Tributaria) es la institución que se encarga de los impuestos y el RFC en México.</h2>
+    </div>
+
+    <div class="tarjeta">
+      <img src="registro.jpg">
+      <h2>⁕REGISTRO CIVIL</h2>
+      <h2>Es la oficina donde se registran los nacimientos, matrimonios y defunciones. De ahí se obtienen actas oficiales.</h2>
+    </div>
+
+    <div class="tarjeta">
+      <img src="pasaporte.jpg">
+      <h2>⁕PASAPORTE</h2>
+      <h2>Documento que te permite viajar fuera del país. También sirve como identificación internacional.</h2>
+    </div>
+  </main>
+</body>
+</html>
