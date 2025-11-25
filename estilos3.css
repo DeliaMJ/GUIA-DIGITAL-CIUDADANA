@@ -1,0 +1,61 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: century gothic;
+    text-align: center;
+}
+
+form {
+    padding: 50px 20px;
+    background-color: #E8EAF6; /* Azul lavanda claro */
+    margin: calc(25% + 100px);
+    margin-top: 70px;
+    padding-top: 28px;
+    margin-bottom: 30px;
+}
+
+h1 {
+    text-align: center;
+    padding: 12px;
+    color: #3949AB; /* Azul elegante */
+}
+
+h2 {
+    text-align: center;
+    padding: 12px;
+    color: #00796B; /* Verde esmeralda suave */
+}
+
+input {
+    width: calc(100% - 20px);
+    background-color: #F3F4F6; /* Gris claro */
+    padding: 9px;
+    margin: auto;
+    margin-top: 12px;
+    font-size: 16px;
+}
+
+input[type='submit'] {
+    background-color: #64B5F6; /* Azul pastel */
+    color: #fff;
+    width: calc(80% - 20px);
+    margin: 0 10%;
+    margin-top: 22px;
+    border: none;
+}
+
+.correctomtra {
+    text-align: center;
+    width: 100%;
+    padding: 12px;
+    background-color: #C8E6C9; /* Verde muy claro */
+    color: #2E7D32; /* Verde más intenso para texto */
+}
+
+.incorrectomtra {
+    text-align: center;
+    width: 100%;
+    padding: 12px;
+    background-color: #FFCDD2; /* Rosa claro */
+    color: #C62828; /* Rojo suave */
+}
