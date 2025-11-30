@@ -1,4 +1,3 @@
-
 *, *::before, *::after{
     margin: 0;
     padding: 0;
@@ -327,5 +326,91 @@ h2{
       transform: rotateY(0deg);
   }to{
       transform: rotateY(360deg);
+      
   }
 }
+/* ----------------- AJUSTES RESPONSIVOS (como el código de la profa) -------------------- */
+
+/* Para pantallas menores a 600px */
+@media (max-width: 600px) {
+
+    /* AJUSTE DE LA GALERÍA HEXAGONAL */
+    .galeria {
+        width: 100%;
+        grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+        grid-auto-rows: 150px;     /* hexágonos más pequeños */
+        gap: .5rem;
+    }
+
+    .galeria_item {
+        height: 150px;
+    }
+
+    /* Reduce aún más la primera imagen */
+    .galeria_item:first-of-type {
+        grid-column: span 2;
+    }
+
+    /* AJUSTE DE IMÁGENES */
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* AJUSTE DEL CARRUSEL 3D */
+    .content-all {
+        width: 150px;
+    }
+
+    .content-carrousel figure {
+        height: 120px;
+    }
+
+    .content-carrousel figure:nth-child(1){transform: rotateY(0deg) translateZ(180px);}
+    .content-carrousel figure:nth-child(2){transform: rotateY(40deg) translateZ(180px);}
+    .content-carrousel figure:nth-child(3){transform: rotateY(80deg) translateZ(180px);}
+    .content-carrousel figure:nth-child(4){transform: rotateY(120deg) translateZ(180px);}
+    .content-carrousel figure:nth-child(5){transform: rotateY(160deg) translateZ(180px);}
+    .content-carrousel figure:nth-child(6){transform: rotateY(200deg) translateZ(180px);}
+    .content-carrousel figure:nth-child(7){transform: rotateY(240deg) translateZ(180px);}
+    .content-carrousel figure:nth-child(8){transform: rotateY(280deg) translateZ(180px);}
+    .content-carrousel figure:nth-child(9){transform: rotateY(320deg) translateZ(180px);}
+    .content-carrousel figure:nth-child(10){transform: rotateY(360deg) translateZ(180px);}
+
+    /* TÍTULO */
+    h2 {
+        font-size: 30px;
+        margin-top: 20px;
+    }
+
+    /* Ajuste de contenedores */
+    .gallery2 {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+/* PANTALLAS MUY PEQUEÑAS (menos de 380px) */
+@media (max-width: 380px) {
+
+    .galeria {
+        grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
+        grid-auto-rows: 130px;
+    }
+
+    .galeria_item {
+        height: 130px;
+    }
+
+    .content-all {
+        width: 120px;
+    }
+
+    .content-carrousel figure {
+        height: 100px;
+    }
+}
+
+
