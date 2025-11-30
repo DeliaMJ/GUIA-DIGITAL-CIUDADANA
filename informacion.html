@@ -2,9 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <!-- Código de la profa -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Guía Digital Ciudadana de Trámites</title>
 
     <style>
@@ -57,7 +55,7 @@
             background-color: white;
             padding: 25px;
             border-radius: 10px;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
         }
 
         h2 {
@@ -99,73 +97,54 @@
             margin-bottom: 30px;
         }
 
-        /* CONTENEDOR RESPONSIVO PARA TABLAS */
-        .tabla-responsive {
+        /* ---------- TABLAS RESPONSIVAS ---------- */
+        .tabla-container {
             width: 100%;
             overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
-            border-radius: 8px;
-            margin-top: 10px;
         }
 
         .tabla-info {
             width: 100%;
             border-collapse: collapse;
-            min-width: 600px; /* Para que la tabla no se aplaste */
+            margin-top: 15px;
+            min-width: 600px;
         }
 
-        .tabla-info th, .tabla-info td {
+        .tabla-info th,
+        .tabla-info td {
             border: 1px solid #ccc;
             padding: 10px;
             text-align: left;
-            background: white;
         }
 
         .tabla-info th {
             background-color: #e9f9fb;
         }
 
-        /* Ajuste automático para imágenes y videos */
-        img, video {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            margin-top: 10px;
-        }
-
-        /* Iframes responsivos */
         iframe {
             width: 100%;
+            border-radius: 10px;
+            margin-top: 20px;
             height: 350px;
-            border: none;
-            border-radius: 8px;
         }
 
         /* ===============================
-           CÓDIGO DE LA PROFA MEJORADO
+           CÓDIGO DE LA PROFA (AJUSTE MÓVIL)
            =============================== */
         @media (max-width: 600px) {
-            header h1 {
-                font-size: 22px;
+            body {
+                padding: 10px;
             }
-
-            nav a {
-                display: inline-block;
-                margin: 5px;
-                font-size: 14px;
+            main {
+                padding: 10px;
             }
-
             h1, h2 {
                 font-size: 1.2em;
                 text-align: center;
             }
-
             iframe {
+                width: 100%;
                 height: 200px;
-            }
-
-            section {
-                padding: 15px;
             }
         }
     </style>
@@ -191,34 +170,31 @@
 
         <section>
             <h2>Trámites Principales en Línea</h2>
-            <p>Estos son los principales trámites que puedes realizar en línea o de forma presencial en el Estado de México. Recuerda que los enlaces y detalles se encuentran en la sección de información.</p>
+            <p>Estos son los principales trámites que puedes realizar en línea o de forma presencial en el Estado de México.</p>
 
             <ul>
-                <li>CURP (Clave Única de Registro de Población)</li>
+                <li>CURP</li>
                 <li>Acta de Nacimiento</li>
                 <li>RFC</li>
                 <li>Licencia de Conducir</li>
                 <li>INE</li>
-                <li>Pasaporte</li>
+                <li>Pasaporte Mexicano</li>
                 <li>Pago de Agua y Predial</li>
             </ul>
 
-            <div class="nota">
-                Consejo: Verifica siempre que tus datos estén actualizados antes de iniciar cualquier trámite.
-            </div>
+            <div class="nota">Consejo: Verifica siempre que tus datos estén actualizados antes de iniciar cualquier trámite.</div>
         </section>
 
         <section>
             <h2>¿Qué son los Trámites Ciudadanos?</h2>
-            <p>Los trámites ciudadanos son procesos para obtener documentos, permisos o servicios ante el gobierno. Gracias a la tecnología, ahora muchos pueden hacerse en línea evitando largas filas.</p>
+            <p>Los trámites ciudadanos son procesos para obtener documentos, permisos o registros ante instituciones de gobierno.</p>
         </section>
 
         <section>
             <h2>Oficinas y Lugares de Atención en Valle de Bravo</h2>
-            <p>Aunque muchos trámites pueden hacerse en línea, algunos requieren acudir personalmente. Aquí están las principales oficinas:</p>
+            <p>Algunos trámites requieren acudir personalmente. Aquí las oficinas:</p>
 
-            <!-- TABLA RESPONSIVA -->
-            <div class="tabla-responsive">
+            <div class="tabla-container">
                 <table class="tabla-info">
                     <tr>
                         <th>Dependencia</th>
@@ -228,48 +204,42 @@
                     </tr>
                     <tr>
                         <td><strong>Tesorería Municipal</strong></td>
-                        <td>Av. Santa María No. 102, Col. Centro</td>
-                        <td>Lunes a Viernes 9:00 a 15:00 hrs</td>
+                        <td>Av. Santa María No. 102, Centro</td>
+                        <td>Lunes a Viernes 9:00 a 15:00</td>
                         <td>Centro de Valle de Bravo</td>
                     </tr>
                     <tr>
                         <td><strong>Registro Civil</strong></td>
-                        <td>Calle Joaquín Arcadio Pagaza No. 7, Col. Centro</td>
-                        <td>Lunes a Viernes 8:30 a 14:00 hrs</td>
+                        <td>Joaquín Arcadio Pagaza No. 7, Centro</td>
+                        <td>Lunes a Viernes 8:30 a 14:00</td>
                         <td>Zona Centro</td>
                     </tr>
                     <tr>
                         <td><strong>Licencias y Tránsito</strong></td>
-                        <td>Av. Toluca No. 25, Santa María Ahuacatlán</td>
-                        <td>Lunes a Viernes 9:00 a 16:00 hrs</td>
-                        <td>Colonia Santa María</td>
+                        <td>Av. Toluca No. 25, Sta. María Ahuacatlán</td>
+                        <td>Lunes a Viernes 9:00 a 16:00</td>
+                        <td>Santa María</td>
                     </tr>
                     <tr>
                         <td><strong>Agua Potable</strong></td>
-                        <td>Av. Benito Juárez No. 50, Col. Centro</td>
-                        <td>Lunes a Viernes 9:00 a 15:00 hrs</td>
-                        <td>Centro de Valle de Bravo</td>
+                        <td>Benito Juárez No. 50, Centro</td>
+                        <td>Lunes a Viernes 9:00 a 15:00</td>
+                        <td>Centro</td>
                     </tr>
                 </table>
             </div>
-
-            <h3>Formas de pago</h3>
-            <p>Puedes pagar tus servicios en ventanilla o en línea. Guarda siempre tu comprobante.</p>
         </section>
 
-        <p>Trámites y servicios en línea disponibles en nuestra página, los podrás ver a continuación en el video:</p>
+        <p>Trámites y servicios en línea disponibles en el siguiente video:</p>
 
-        <!-- VIDEO RESPONSIVO -->
-        <iframe 
-            src="https://drive.google.com/file/d/1RZGn1exEzVRpIlT90DCpiEJrS5y4hzOb/preview"
-            allow="autoplay; encrypted-media"
-            title="Video desde Google Drive">
-        </iframe>
+        <iframe src="https://drive.google.com/file/d/1RZGn1exEzVRpIlT90DCpiEJrS5y4hzOb/preview" allow="autoplay; encrypted-media" title="Video desde Google Drive"></iframe>
 
     </main>
 
 </body>
 </html>
+
+
 
 
 
