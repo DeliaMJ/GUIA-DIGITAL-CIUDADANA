@@ -2,8 +2,12 @@
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <!-- Código de la profa -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>Página Ciudadano Básica</title>
+
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -18,6 +22,7 @@
       background: #0b7285;
       color: white;
       border-radius: 8px;
+      margin-bottom: 12px;
     }
     main {
       background: white;
@@ -43,9 +48,32 @@
       text-decoration: none;
       border-radius: 6px;
     }
+
+    /* =============================
+       CÓDIGO RESPONSIVO DE LA PROFA
+       ============================= */
+    @media (max-width: 600px) {
+      body {
+        padding: 10px;
+      }
+      main {
+        padding: 10px;
+      }
+      h1, h2 {
+        font-size: 1.2em;
+        text-align: center;
+      }
+      iframe {
+        width: 100%;
+        height: 200px !important;
+      }
+    }
   </style>
+
 </head>
+
 <body>
+
   <header>
     <h1>Ciudadano - SECCIÓN 1</h1>
   </header>
@@ -55,10 +83,12 @@
   </header>
 
   <main>
+
     <h2>CIUDADANO...</h2>
 
-   <img src="cecyto1.jpg" alt="Imagen del ciudadano">
-   <img src="equipo.jpg" alt="Imagen del ciudadano">
+    <img src="cecyto1.jpg" alt="Imagen del ciudadano">
+    <img src="equipo.jpg" alt="Imagen del ciudadano">
+
     <p>
       La participación ciudadana es uno de los pilares fundamentales de toda sociedad democrática. 
       A través de ella, las personas pueden influir en las decisiones públicas, expresar sus opiniones 
@@ -70,19 +100,21 @@
 
     <h2>Video informativo</h2>
 
-    <!-- Video desde Google Drive -->
-    <iframe src="https://drive.google.com/file/d/1RZGn1exEzVRpIlT90DCpiEJrS5y4hzOb/preview"
-            width="640" height="360" allow="autoplay; encrypted-media"
-            title="Video desde Google Drive">
+    <!-- Video desde Google Drive RESPONSIVO -->
+    <iframe 
+      src="https://drive.google.com/file/d/1RZGn1exEzVRpIlT90DCpiEJrS5y4hzOb/preview"
+      allow="autoplay; encrypted-media"
+      title="Video desde Google Drive">
     </iframe>
 
     <h2>Descargar archivo</h2>
 
-    <!-- Enlace de descarga desde Google Drive -->
     <a class="btn" href="https://drive.google.com/uc?export=download&id=1WyIAo-0fYs4TnJiTpT5A6GA7fwtTQOIT" target="_blank">
       Descargar archivo
     </a>
+
   </main>
+
   <header>
     <h1>Ciudadano - SECCIÓN 2</h1>
   </header>
@@ -90,5 +122,8 @@
   <footer>
     <p>© 2025 Ciudadano Ejemplar</p>
   </footer>
+
 </body>
 </html>
+
+
