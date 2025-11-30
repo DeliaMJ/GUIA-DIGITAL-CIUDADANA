@@ -241,7 +241,7 @@ h1 img{
 
 
 
-.gallery2 {
+.gallery1 {
   display: flex;
   width: 1200px;
   height: 90vh;
@@ -385,7 +385,7 @@ h2{
     }
 
     /* Ajuste de contenedores */
-    .gallery2 {
+    .gallery1 {
         width: 100%;
         height: auto;
     }
@@ -412,5 +412,6 @@ h2{
         height: 100px;
     }
 }
+
 
 
