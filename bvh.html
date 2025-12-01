@@ -13,20 +13,20 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px; /* espaciado entre imágenes */
+    gap: 20px; /* Espaciado entre imágenes */
     padding: 20px;
 }
 
 .galeria_item img {
-    width: 180px; /* tamaño máximo en computadora */
+    width: 180px; /* Tamaño estándar en computadora */
     height: auto;
     display: block;
 }
 
-/* Ajuste móvil: pantalla muy pequeña */
+/* Ajuste pantalla pequeña: celulares */
 @media (max-width: 480px) {
     .galeria_item img {
-        width: 120px;
+        width: 100px; /* Reducimos tamaño para que quepan en pantalla */
         height: auto;
     }
     .galeria {
@@ -40,10 +40,10 @@
     }
 }
 
-/* Ajuste móvil: pantalla mediana */
+/* Ajuste pantalla mediana: tablets */
 @media (min-width: 481px) and (max-width: 768px) {
     .galeria_item img {
-        width: 140px;
+        width: 140px; /* Tamaño intermedio */
         height: auto;
     }
     .galeria {
@@ -57,7 +57,7 @@
     }
 }
 
-/* Ajuste tablet y computadora */
+/* Pantalla grande: computadora */
 @media (min-width: 769px) {
     .galeria_item img {
         width: 180px;
@@ -96,6 +96,7 @@
 
 </body>
 </html>
+
 
 
 
