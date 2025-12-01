@@ -1,141 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plantel Valle de Bravo</title>
-    <link rel="stylesheet" href="principal.css">
-    <link rel="icon" href="valle.png" type="png">
-    <a href="OPDAPAS.html"></a>
- 
-    <style>
-        .fondo-valle{
-            background-image: linear-gradient(to top, #0593bb 20%, #0e26ae 80%);
-            background-size: cover;
-            background-position: center center;
-            width: 100%;
-            height: 80vh;
-            background-attachment: fixed;
-        }
-        .contenido-fondo-valle{
-            display: flex;
-            width: 100%;
-            height: 100%;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plantel Valle de Bravo</title>
+<link rel="icon" href="valle.png" type="png">
 
-        @keyframes move_wave {
-            0% { transform: translateX(0) translateZ(0) scaleY(1) }
-            50% { transform: translateX(-25%) translateZ(0) scaleY(0.55) }
-            100% { transform: translateX(-50%) translateZ(0) scaleY(1) }
-        }
-        .waveWrapper {
-            overflow: hidden;
-            position: absolute;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            top: 0;
-            margin: auto;
-        }
-        .waveWrapperInner {
-            position: absolute;
-            width: 100%;
-            overflow: hidden;
-            height: 70%;
-        }
-        .bgTop { z-index: 15; opacity: 0.5; }
-        .bgMiddle { z-index: 10; opacity: 0.75; }
-        .bgBottom { z-index: 5; }
-        .wave {
-            position: absolute;
-            left: 0;
-            width: 200%;
-            height: 100%;
-            background-repeat: repeat no-repeat;
-            background-position: 0 bottom;
-            transform-origin: center bottom;
-        }
-        .waveTop { background-size: 50% 100px; }
-        .waveAnimation .waveTop { animation: move-wave 3s; -webkit-animation: move-wave 3s; -webkit-animation-delay: 1s; animation-delay: 1s; }
-        .waveMiddle { background-size: 50% 120px; }
-        .waveAnimation .waveMiddle { animation: move_wave 10s linear infinite; }
-        .waveBottom { background-size: 50% 100px; }
-        .waveAnimation .waveBottom { animation: move_wave 15s linear infinite; }
+<style>
+/* ---------------- HEADER ---------------- */
+.inner-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh; /* más delgado en móvil */
+    background: linear-gradient(to top, #0593bb 20%, #0e26ae 80%);
+}
+.agua { width:100%; height:7vh; min-height:50px; }
 
-        /* ----------- AJUSTE RESPONSIVO ------------ */
-        @media (max-width: 480px) {
-            h2 { font-size: 28px; margin-top: 40px; }
-            .content-all { width: 150px; margin-top: 30px; }
-            .content-carrousel { width: 100%; transform: scale(0.7); }
-            .content-carrousel figure { height: 120px; }
-            .gallery2 { width: 95%; height: auto; flex-direction: column; }
-            .content-carrousel img { width: 100%; height: auto; object-fit: cover; }
-            .inner-header { height: 40vh; }
-            .agua { height: 10vh; min-height: 60px; }
-        }
+/* ---------------- GALERÍA HEXAGONAL ---------------- */
+.galeria {
+    width: 90%;
+    max-width: 1200px;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+    grid-auto-rows: 120px;
+    justify-content: center;
+    gap: 0.7rem;
+}
+.galeria_item {
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    height: 120px;
+    transition: 0.5s filter;
+}
+.galeria_item:hover { filter: brightness(0.3); }
 
-        @media (min-width: 481px) and (max-width: 768px) {
-            h2 { font-size: 36px; margin-top: 60px; }
-            .content-all { width: 180px; margin-top: 40px; }
-            .content-carrousel { width: 80%; transform: scale(0.85); }
-            .content-carrousel figure { height: 150px; }
-            .gallery2 { width: 90%; height: auto; }
-            .content-carrousel img { width: 100%; height: auto; object-fit: cover; }
-            .inner-header { height: 50vh; }
-            .agua { height: 12vh; min-height: 80px; }
-        }
-    </style>
-      
-    <script>
-        window.console = window.console || function(t) {};
-    </script>
+/* ---------------- CARRUSEL 3D ---------------- */
+.content-all { width: 150px; margin: 30px auto; perspective: 600px; }
+.content-carrousel { width: 100%; transform: scale(0.55); transform-style: preserve-3d; animation: rotar 10s infinite linear; }
+.content-carrousel figure { width: 100%; height:90px; overflow:hidden; position:absolute; box-shadow:0 0 15px 0 black; transition: all 300ms; }
+.content-carrousel img { width:100%; height:auto; object-fit:cover; transition:all 300ms; }
+.content-carrousel img:hover { transform: scale(1.2); }
+
+/* ---------------- TITULO ---------------- */
+h2 { font-size:28px; margin-top:20px; text-align:center; color:aqua; text-shadow:0 0 6px black; }
+
+/* ---------------- ANIMACIONES ---------------- */
+@keyframes rotar { from{transform: rotateY(0deg);} to{transform: rotateY(360deg);} }
+
+/* ---------------- AJUSTES RESPONSIVOS ---------------- */
+@media (min-width:481px) and (max-width:768px) {
+    .content-all { width: 180px; margin-top:40px; }
+    .content-carrousel { transform: scale(0.7); }
+    .content-carrousel figure { height:120px; }
+    .inner-header { height:40vh; }
+    .agua { height:10vh; min-height:60px; }
+    h2 { font-size:32px; margin-top:40px; }
+}
+
+@media (min-width:769px) {
+    .content-all { width:210px; }
+    .content-carrousel { transform: scale(1); }
+    .content-carrousel figure { height:180px; }
+    h2 { font-size:50px; margin-top:80px; }
+}
+</style>
 </head>
 <body>
-    <div class="header">
-        <div class="inner-header flex">
-            <div class="logo"></div>
-        </div>
-        <div>
-        <svg class="agua" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+
+<!-- HEADER CON OLAS -->
+<div class="header">
+    <div class="inner-header flex"></div>
+    <svg class="agua" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
         viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-            <defs>
-                <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-            </defs>
-            <g class="parallax">
-                <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
-                <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
-                <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
-                <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
-            </g>
-        </svg>
-        </div>
-    </div>
+        <defs>
+            <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+            <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7)" />
+            <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+            <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+            <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+        </g>
+    </svg>
+</div>
 
-    <div id="gallery1" class="gallery2">
-        <section>
-            <h2>Datos personales</h2>
-            <div class="content-all">
-                <div class="content-carrousel">
-                    <figure><img src="ine.jpg"></figure>
-                    <figure><img src="CURP1.jpg"></figure>
-                    <figure><img src="ACTADENACIMIENTO.jpg"></figure>
-                    <figure><img src="CURP1.jpg"></figure>
-                    <figure><img src="ine.jpg" ></figure>
-                    <figure><img src="ine2.jpg"></figure>
-                    <figure><img src="ACTADENACIMIENTO.jpg"></figure>
-                    <figure><img src="RESIVO.jpg"></figure>
-                    <figure><img src="RESIVO1.jpg"></figure>
-                </div>
+<!-- GALERÍA -->
+<div id="gallery1" class="gallery2">
+    <section>
+        <h2>Datos personales</h2>
+        <div class="content-all">
+            <div class="content-carrousel">
+                <figure><img src="ine.jpg"></figure>
+                <figure><img src="CURP1.jpg"></figure>
+                <figure><img src="ACTADENACIMIENTO.jpg"></figure>
+                <figure><img src="CURP1.jpg"></figure>
+                <figure><img src="ine.jpg" ></figure>
+                <figure><img src="ine2.jpg"></figure>
+                <figure><img src="ACTADENACIMIENTO.jpg"></figure>
+                <figure><img src="RESIVO.jpg"></figure>
+                <figure><img src="RESIVO1.jpg"></figure>
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
+</div>
 
-    <div class="separador"></div>
+<div class="separador"></div>
+
 </body>
 </html>
+
+
 
 
 
