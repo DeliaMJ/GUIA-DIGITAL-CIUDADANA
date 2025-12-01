@@ -30,12 +30,33 @@
         50% { transform: translateX(-25%) translateZ(0) scaleY(0.55) }
         100% { transform: translateX(-50%) translateZ(0) scaleY(1) }
     }
-    .waveWrapper { overflow: hidden; position: absolute; left: 0; right: 0; bottom: 0; top: 0; margin: auto; }
-    .waveWrapperInner { position: absolute; width: 100%; overflow: hidden; height: 70%; }
+    .waveWrapper {
+        overflow: hidden;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        margin: auto;
+    }
+    .waveWrapperInner {
+        position: absolute;
+        width: 100%;
+        overflow: hidden;
+        height: 70%;
+    }
     .bgTop { z-index: 15; opacity: 0.5; }
     .bgMiddle { z-index: 10; opacity: 0.75; }
     .bgBottom { z-index: 5; }
-    .wave { position: absolute; left: 0; width: 200%; height: 100%; background-repeat: repeat no-repeat; background-position: 0 bottom; transform-origin: center bottom; }
+    .wave {
+        position: absolute;
+        left: 0;
+        width: 200%;
+        height: 100%;
+        background-repeat: repeat no-repeat;
+        background-position: 0 bottom;
+        transform-origin: center bottom;
+    }
     .waveTop { background-size: 50% 100px; }
     .waveAnimation .waveTop { animation: move-wave 3s; -webkit-animation: move-wave 3s; -webkit-animation-delay: 1s; animation-delay: 1s; }
     .waveMiddle { background-size: 50% 120px; }
@@ -43,38 +64,41 @@
     .waveBottom { background-size: 50% 100px; }
     .waveAnimation .waveBottom { animation: move_wave 15s linear infinite; }
 
-    /* ------------------ CARRUSEL ------------------- */
-    .content-carrousel figure {
-        margin: 0 10px; /* Mantener espacio entre imágenes */
-    }
-    .content-carrousel img {
-        width: 100%;
-        height: auto;
-        object-fit: contain;
-        display: block;
-    }
-
     /* ----------- AJUSTE RESPONSIVO ------------ */
-    @media (max-width: 768px) {
-        h2 { font-size: 28px; margin-top: 40px; text-align: center; }
-        .content-all { width: 180px; margin-top: 30px; }
-        .content-carrousel { width: 100%; transform: scale(0.7); }
-        .content-carrousel figure { height: auto; min-height: 120px; margin: 0 8px; }
+    @media (max-width: 480px) {
+        h2 { font-size: 28px; margin-top: 40px; }
+        .content-all { width: 140px; margin-top: 30px; }
+        .content-carrousel { width: 100%; transform: scale(0.6); gap: 10px; }
+        .content-carrousel figure { height: 100px; margin-right: 10px; }
         .gallery2 { width: 95%; height: auto; flex-direction: column; }
-        .inner-header { height: 40vh; }
-        .agua { height: 12vh; min-height: 60px; }
+        .content-carrousel img { width: 100%; height: auto; object-fit: contain; }
+        .inner-header { height: 35vh; }
+        .agua { height: 8vh; min-height: 50px; }
     }
 
-    @media (max-width: 480px) {
-        h2 { font-size: 24px; margin-top: 30px; }
-        .content-all { width: 150px; margin-top: 20px; }
-        .content-carrousel { width: 100%; transform: scale(0.6); }
-        .content-carrousel figure { min-height: 100px; margin: 0 6px; }
-        .gallery2 { width: 95%; height: auto; flex-direction: column; }
-        .inner-header { height: 35vh; }
-        .agua { height: 10vh; min-height: 50px; }
+    @media (min-width: 481px) and (max-width: 768px) {
+        h2 { font-size: 36px; margin-top: 50px; }
+        .content-all { width: 180px; margin-top: 35px; }
+        .content-carrousel { width: 80%; transform: scale(0.75); gap: 15px; }
+        .content-carrousel figure { height: 140px; margin-right: 12px; }
+        .gallery2 { width: 90%; height: auto; }
+        .content-carrousel img { width: 100%; height: auto; object-fit: contain; }
+        .inner-header { height: 45vh; }
+        .agua { height: 10vh; min-height: 60px; }
+    }
+
+    /* Mantener el espaciado entre imágenes en cualquier pantalla */
+    .content-carrousel {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        gap: 20px;
     }
 </style>
+
+<script>
+    window.console = window.console || function(t) {};
+</script>
 </head>
 <body>
 <div class="header">
