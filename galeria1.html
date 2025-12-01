@@ -8,99 +8,111 @@
 <link rel="icon" href="valle.png" type="png">
 
 <style>
-    .fondo-valle{
-        background-image: linear-gradient(to top, #0593bb 20%, #0e26ae 80%);
-        background-size: cover;
-        background-position: center center;
-        width: 100%;
-        height: 80vh;
-        background-attachment: fixed;
-    }
-    .contenido-fondo-valle{
-        display: flex;
-        width: 100%;
-        height: 100%;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
+/* ---------------- Diseño principal ---------------- */
+.fondo-valle{
+    background-image: linear-gradient(to top, #0593bb 20%, #0e26ae 80%);
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 80vh;
+    background-attachment: fixed;
+}
+.contenido-fondo-valle{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.waveWrapper { overflow: hidden; position: absolute; left: 0; right: 0; bottom: 0; top: 0; margin: auto; }
+.waveWrapperInner { position: absolute; width: 100%; overflow: hidden; height: 70%; }
+.bgTop { z-index: 15; opacity: 0.5; }
+.bgMiddle { z-index: 10; opacity: 0.75; }
+.bgBottom { z-index: 5; }
+.wave { position: absolute; left: 0; width: 200%; height: 100%; background-repeat: repeat no-repeat; background-position: 0 bottom; transform-origin: center bottom; }
+.waveTop { background-size: 50% 100px; }
+.waveAnimation .waveTop { animation: move-wave 3s; -webkit-animation: move-wave 3s; -webkit-animation-delay: 1s; animation-delay: 1s; }
+.waveMiddle { background-size: 50% 120px; }
+.waveAnimation .waveMiddle { animation: move_wave 10s linear infinite; }
+.waveBottom { background-size: 50% 100px; }
+.waveAnimation .waveBottom { animation: move_wave 15s linear infinite; }
 
-    @keyframes move_wave {
-        0% { transform: translateX(0) translateZ(0) scaleY(1) }
-        50% { transform: translateX(-25%) translateZ(0) scaleY(0.55) }
-        100% { transform: translateX(-50%) translateZ(0) scaleY(1) }
-    }
-    .waveWrapper {
-        overflow: hidden;
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        top: 0;
-        margin: auto;
-    }
-    .waveWrapperInner {
-        position: absolute;
-        width: 100%;
-        overflow: hidden;
-        height: 70%;
-    }
-    .bgTop { z-index: 15; opacity: 0.5; }
-    .bgMiddle { z-index: 10; opacity: 0.75; }
-    .bgBottom { z-index: 5; }
-    .wave {
-        position: absolute;
-        left: 0;
-        width: 200%;
-        height: 100%;
-        background-repeat: repeat no-repeat;
-        background-position: 0 bottom;
-        transform-origin: center bottom;
-    }
-    .waveTop { background-size: 50% 100px; }
-    .waveAnimation .waveTop { animation: move-wave 3s; -webkit-animation: move-wave 3s; -webkit-animation-delay: 1s; animation-delay: 1s; }
-    .waveMiddle { background-size: 50% 120px; }
-    .waveAnimation .waveMiddle { animation: move_wave 10s linear infinite; }
-    .waveBottom { background-size: 50% 100px; }
-    .waveAnimation .waveBottom { animation: move_wave 15s linear infinite; }
+/* ---------------- Carrusel ---------------- */
+.content-all {
+    width: 100%;
+    max-width: 210px;
+    margin: 50px auto 0 auto;
+    perspective: 800px;
+    position: relative;
+}
 
-    /* ----------- AJUSTE RESPONSIVO ------------ */
-    @media (max-width: 480px) {
-        h2 { font-size: 28px; margin-top: 40px; }
-        .content-all { width: 140px; margin-top: 30px; }
-        .content-carrousel { width: 100%; transform: scale(0.6); gap: 10px; }
-        .content-carrousel figure { height: 100px; margin-right: 10px; }
-        .gallery2 { width: 95%; height: auto; flex-direction: column; }
-        .content-carrousel img { width: 100%; height: auto; object-fit: contain; }
-        .inner-header { height: 35vh; }
-        .agua { height: 8vh; min-height: 50px; }
-    }
+.content-carrousel {
+    width: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px; /* espaciado entre imágenes */
+}
 
-    @media (min-width: 481px) and (max-width: 768px) {
-        h2 { font-size: 36px; margin-top: 50px; }
-        .content-all { width: 180px; margin-top: 35px; }
-        .content-carrousel { width: 80%; transform: scale(0.75); gap: 15px; }
-        .content-carrousel figure { height: 140px; margin-right: 12px; }
-        .gallery2 { width: 90%; height: auto; }
-        .content-carrousel img { width: 100%; height: auto; object-fit: contain; }
-        .inner-header { height: 45vh; }
-        .agua { height: 10vh; min-height: 60px; }
-    }
+.content-carrousel figure {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
 
-    /* Mantener el espaciado entre imágenes en cualquier pantalla */
-    .content-carrousel {
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: flex-start;
-        gap: 20px;
-    }
+.content-carrousel img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ---------------- Encabezado y ola ---------------- */
+.inner-header { height: 65vh; }
+.agua { height: 17vh; min-height: 100px; }
+
+/* ---------------- Titulos ---------------- */
+h2 {
+    text-align: center;
+    font-size: 50px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-top: 80px;
+    color: aqua;
+    text-shadow: 0px 0px 6px black;
+}
+
+/* ---------------- Ajuste Responsivo ---------------- */
+@media (max-width: 1024px) {
+    .content-all { max-width: 180px; }
+    .content-carrousel figure { max-width: 150px; }
+    h2 { font-size: 36px; margin-top: 50px; }
+    .inner-header { height: 50vh; }
+    .agua { height: 12vh; min-height: 60px; }
+}
+
+@media (max-width: 768px) {
+    .content-all { max-width: 140px; }
+    .content-carrousel figure { max-width: 120px; }
+    h2 { font-size: 32px; margin-top: 40px; }
+    .inner-header { height: 45vh; }
+    .agua { height: 10vh; min-height: 50px; }
+}
+
+@media (max-width: 480px) {
+    .content-all { max-width: 120px; }
+    .content-carrousel figure { max-width: 100px; }
+    h2 { font-size: 28px; margin-top: 30px; }
+    .inner-header { height: 35vh; }
+    .agua { height: 8vh; min-height: 40px; }
+}
 </style>
 
-<script>
-    window.console = window.console || function(t) {};
-</script>
 </head>
 <body>
+
 <div class="header">
     <div class="inner-header flex">
         <div class="logo"></div>
@@ -141,8 +153,10 @@
 </div>
 
 <div class="separador"></div>
+
 </body>
 </html>
+
 
 
 
