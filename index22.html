@@ -3,68 +3,16 @@
 <head>
     <title>ASISTENCIA GRUPO 502</title>
     <meta charset="utf-8">
-
-    <!-- Hace que el sitio se adapte correctamente a celulares -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" type="text/css" href="estilos_deli2.css">
-
-    <style>
-        /* Ajustes RESPONSIVE SIN CAMBIAR TU DISEÑO */
-
-        body {
-            padding: 10px;
-            box-sizing: border-box;
-        }
-
-        form {
-            max-width: 500px;
-            margin: auto;
-        }
-
-        input[type="text"],
-        input[type="submit"] {
-            width: 100%;
-            max-width: 100%;
-            padding: 12px;
-            margin-bottom: 12px;
-            font-size: 17px;
-            box-sizing: border-box;
-        }
-
-        h1, h2 {
-            text-align: center;
-            word-wrap: break-word;
-        }
-
-        /* Ajuste a los textos hechos con <font> para que no sean enormes en cel */
-        .titulo1 {
-            font-size: 7vw;   /* Se hace más chico en celular automáticamente */
-            display: block;
-            text-align: center;
-        }
-
-        .titulo2 {
-            font-size: 9vw;
-            display: block;
-            text-align: center;
-        }
-
-        /* En pantallas grandes vuelve al tamaño normal */
-        @media (min-width: 600px) {
-            .titulo1 { font-size: 40px; }
-            .titulo2 { font-size: 50px; }
-        }
-    </style>
 </head>
 <body>
     
-    <font class="titulo1" face="calibri" color="green">
+    <font face="calibri" size=15 color=green>
         COLEGIO DE ESTUDIOS CIENTÍFICOS Y TECNOLÓGICOS DEL ESTADO DE MÉXICO.
     </font>
     <hr width="100%">
     
-    <font class="titulo2" face="calibri" color="blue">
+    <font face="calibri" size=20 color=blue>
         REGISTRO ESTUDIANTES 
     </font>
     
@@ -78,7 +26,8 @@
         <input type="text" name="localidadcomunidad" placeholder="LocalidadComunidad">
         <input type="text" name="municipio" placeholder="Municipio">
 
-        <input type="submit" name="registrarmaestra">
+        <!-- AQUI SOLO AGREGUÉ LA CLASE -->
+        <input type="submit" name="registrarmaestra" class="btn-enviar">
     </form>
     
     <?php
