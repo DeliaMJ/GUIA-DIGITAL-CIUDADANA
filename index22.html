@@ -4,6 +4,19 @@
     <title>ASISTENCIA GRUPO 502</title>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="estilos_deli2.css">
+
+    <style>
+        /* Ajuste SOLO para el botón en CELULAR */
+        @media (max-width: 480px) {
+            input[type="submit"] {
+                width: 90% !important;
+                padding: 12px !important;
+                font-size: 18px !important;
+                margin: 15px auto !important;
+                display: block !important;
+            }
+        }
+    </style>
 </head>
 <body>
     
@@ -26,8 +39,7 @@
         <input type="text" name="localidadcomunidad" placeholder="LocalidadComunidad">
         <input type="text" name="municipio" placeholder="Municipio">
 
-        <!-- AQUI SOLO AGREGUÉ LA CLASE -->
-        <input type="submit" name="registrarmaestra" class="btn-enviar">
+        <input type="submit" name="registrarmaestra" value="Enviar Registro">
     </form>
     
     <?php
@@ -35,3 +47,4 @@
     ?>
 </body>
 </html>
+
