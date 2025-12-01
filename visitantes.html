@@ -1,15 +1,35 @@
-<!DOCTYPE HTML><!--doc en html-->
-<HTML LANG="ES"><!--doc en español-->
-<HEAD>
-<meta charset="UFT-8"><!--codifica caracteres-->
-<meta neme="viewport" content="width=device-width, initial-scale=1.0"><!--ajusta el diseño a moviles-->
-<title>DOCUMENTO</title><!--titulo que aparece en la pestaña-->
-<style>
- <body {
-    margin: 0; /*elimina margenes por defecto */
-    font-family:Arial, sans-serif;/*fuente de texto */
+<?php
+include("conexion_deli.php");
+
+// Comprobar si se envió el formulario
+if (isset($_POST['registrarmaestra']) &&
+    !empty(trim($_POST['nombre'])) &&
+    !empty(trim($_POST['apaterno'])) &&
+    !empty(trim($_POST['amaterno'])) &&
+        !empty(trim($_POST['localidadcomunidad'])) &&
+    !empty(trim($_POST['municipio']))) {
+
+    // Limpiar y escapar datos
+    $nombre = mysqli_real_escape_string($conexiondeli, trim($_POST['nombre']));
+    $apaterno = mysqli_real_escape_string($conexiondeli, trim($_POST['apaterno']));
+    $amaterno = isset($_POST['amaterno']) ? mysqli_real_escape_string($conexiondeli, trim($_POST['amaterno'])):"";
+ $localidadcomunidad = isset($_POST['localidadcomunidad']) ? mysqli_real_escape_string($conexiondeli, trim($_POST['localidadcomunidad'])):"";
+    $municipio = mysqli_real_escape_string($conexiondeli, trim($_POST['municipio']));
+
+    // Consulta SQL
+    $maestra_consulta = "INSERT INTO visitantes1 
+    (nombre, apaterno, amaterno, localidadcomunidad, municipio) 
+    VALUES ('$nombre', '$apaterno', '$amaterno', '$localidadcomunidad', '$municipio')";
+
+    $maestra_resultado = mysqli_query($conexiondeli, $maestra_consulta);
+
+    if ($maestra_resultado) {
+        echo "<h3 style='color:green;'>*  REGISTRADO *</h3>";
+    } else {
+        echo "<h3 style='color:red;'>Error en la consulta: " . mysqli_error($conexiondeli) . "</h3>";
     }
-/*estilo del menu principal */
-nav{
-   background: #333;/*fondo gris oscuro */
+
+} else {
+    echo "<h3 style='color:red;'>* IMPORTANTE: DEBE COMPLETAR TODOS LOS DATOS *</h3>";
 }
+?>
