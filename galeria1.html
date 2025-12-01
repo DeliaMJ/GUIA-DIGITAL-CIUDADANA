@@ -31,8 +31,21 @@
             50% { transform: translateX(-25%) translateZ(0) scaleY(0.55) }
             100% { transform: translateX(-50%) translateZ(0) scaleY(1) }
         }
-        .waveWrapper { overflow: hidden; position: absolute; left: 0; right: 0; bottom: 0; top: 0; margin: auto; }
-        .waveWrapperInner { position: absolute; width: 100%; overflow: hidden; height: 70%; }
+        .waveWrapper {
+            overflow: hidden;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            margin: auto;
+        }
+        .waveWrapperInner {
+            position: absolute;
+            width: 100%;
+            overflow: hidden;
+            height: 70%;
+        }
         .bgTop { z-index: 15; opacity: 0.5; }
         .bgMiddle { z-index: 10; opacity: 0.75; }
         .bgBottom { z-index: 5; }
@@ -54,35 +67,25 @@
 
         /* ----------- AJUSTE RESPONSIVO ------------ */
         @media (max-width: 480px) {
-            h2 { font-size: 26px; margin-top: 30px; }
-            .inner-header { height: 30vh; }
-            .agua { height: 8vh; min-height:50px; }
-
-            /* Carrusel 3D */
-            .content-all { width: 140px; margin-top: 20px; perspective: 600px; }
-            .content-carrousel { transform: scale(0.5); } 
-            .content-carrousel figure { height: 100px; }
-            .content-carrousel img { width: 100%; height: auto; object-fit: contain; }
-
-            /* Galería hexagonal */
-            .galeria { grid-template-columns: repeat(auto-fit, minmax(60px, 1fr)); grid-auto-rows: 100px; gap: 0.5rem; }
-            .galeria_item { height: 100px; }
-            .galeria_item img { width: 100%; height: 100%; object-fit: contain; }
+            h2 { font-size: 28px; margin-top: 40px; }
+            .content-all { width: 150px; margin-top: 30px; }
+            .content-carrousel { width: 100%; transform: scale(0.7); }
+            .content-carrousel figure { height: 120px; }
+            .gallery2 { width: 95%; height: auto; flex-direction: column; }
+            .content-carrousel img { width: 100%; height: auto; object-fit: cover; }
+            .inner-header { height: 40vh; }
+            .agua { height: 10vh; min-height: 60px; }
         }
 
         @media (min-width: 481px) and (max-width: 768px) {
-            h2 { font-size: 32px; margin-top: 40px; }
-            .inner-header { height: 40vh; }
-            .agua { height: 10vh; min-height:60px; }
-
-            .content-all { width: 180px; margin-top: 30px; }
-            .content-carrousel { transform: scale(0.7); } 
-            .content-carrousel figure { height: 140px; }
-            .content-carrousel img { object-fit: contain; }
-
-            .galeria { grid-auto-rows: 140px; gap: 0.7rem; }
-            .galeria_item { height: 140px; }
-            .galeria_item img { object-fit: contain; }
+            h2 { font-size: 36px; margin-top: 60px; }
+            .content-all { width: 180px; margin-top: 40px; }
+            .content-carrousel { width: 80%; transform: scale(0.85); }
+            .content-carrousel figure { height: 150px; }
+            .gallery2 { width: 90%; height: auto; }
+            .content-carrousel img { width: 100%; height: auto; object-fit: cover; }
+            .inner-header { height: 50vh; }
+            .agua { height: 12vh; min-height: 80px; }
         }
     </style>
       
@@ -100,7 +103,39 @@
         viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
             <defs>
                 <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-            </de
+            </defs>
+            <g class="parallax">
+                <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+                <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+            </g>
+        </svg>
+        </div>
+    </div>
+
+    <div id="gallery1" class="gallery2">
+        <section>
+            <h2>Datos personales</h2>
+            <div class="content-all">
+                <div class="content-carrousel">
+                    <figure><img src="ine.jpg"></figure>
+                    <figure><img src="CURP1.jpg"></figure>
+                    <figure><img src="ACTADENACIMIENTO.jpg"></figure>
+                    <figure><img src="CURP1.jpg"></figure>
+                    <figure><img src="ine.jpg" ></figure>
+                    <figure><img src="ine2.jpg"></figure>
+                    <figure><img src="ACTADENACIMIENTO.jpg"></figure>
+                    <figure><img src="RESIVO.jpg"></figure>
+                    <figure><img src="RESIVO1.jpg"></figure>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="separador"></div>
+</body>
+</html> 
 
 
 
