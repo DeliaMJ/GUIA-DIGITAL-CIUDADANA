@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ASISTENCIA GRUPO 502</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="estilos_deli2.css">
+</head>
+<body>
+    <img src="IGM_GOBIERNO.jpg" align="left">
+    <img src="LOGOCECY.jfif" align="right">
+    
+    <font face="calibri" size=15 color=green>
+        COLEGIO DE ESTUDIOS CIENTÍFICOS Y TECNOLÓGICOS DEL ESTADO DE MÉXICO.
+    </font>
+    <hr width="100%">
+    
+    <font face="calibri" size=20 color=blue>
+        REGISTRO ESTUDIANTES 
+    </font>
+    
+    <form method="post">
+        <h1>PLANTEL VALLE DE BRAVO</h1>
+        <h2>REGISTRO</h2>
+        
+        <input type="text" name="nombre" placeholder="Nombre">
+        <input type="text" name="apaterno" placeholder="ApellidoPaterno">
+        <input type="text" name="amaterno" placeholder="ApellidoMaterno">
+        <input type="text" name="localidadcomunidad" placeholder="LocalidadComunidad">
+        <input type="text" name="municipio" placeholder="Municipio">
+
+        
+        <input type="submit" name="registrarmaestra">
+    </form>
+    
+    <?php
+        include("vicitantes_delia.php");
+    ?>
+</body>
+</html>
