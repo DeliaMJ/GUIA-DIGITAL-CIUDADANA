@@ -6,7 +6,6 @@
     <title>Plantel Valle de Bravo</title>
     <link rel="stylesheet" href="principal.css">
     <link rel="icon" href="img/unnamed-removebg-preview.png" type="png">
-    <a href="OPDAPAS.html"></a>
 
     <style>
         .fondo-valle{
@@ -25,6 +24,7 @@
             justify-content: center;
             align-items: center;
         }
+
         @keyframes move_wave {
             0% { transform: translateX(0) translateZ(0) scaleY(1) }
             50% { transform: translateX(-25%) translateZ(0) scaleY(0.55) }
@@ -51,29 +51,32 @@
         .waveBottom { background-size: 50% 100px; }
         .waveAnimation .waveBottom { animation: move_wave 15s linear infinite; }
 
-        /* ----------- AJUSTE RESPONSIVO SIN TOCAR DISEÑO ------------ */
-        @media (max-width: 768px) {
-            main.galeria { 
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); 
-                gap: 15px; 
-            }
-            .galeria_item img { width: 100%; height: auto; }
-        }
+        /* ----------- AJUSTE RESPONSIVO ------------ */
         @media (max-width: 480px) {
-            main.galeria { 
-                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); 
-                gap: 10px; 
-            }
-            .galeria_item img { width: 100%; height: auto; }
+            h2 { font-size: 22px; text-align: center; margin-top: 20px; }
+            main.galeria { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; padding: 0 5px; }
+            .galeria_item { flex: 0 0 120px; }
+            .galeria_item img { width: 100%; height: auto; display: block; }
+        }
+
+        @media (min-width: 481px) and (max-width: 768px) {
+            h2 { font-size: 26px; text-align: center; margin-top: 30px; }
+            main.galeria { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; padding: 0 10px; }
+            .galeria_item { flex: 0 0 150px; }
+            .galeria_item img { width: 100%; height: auto; display: block; }
+        }
+
+        @media (min-width: 769px) {
+            main.galeria { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 0 20px; }
+            .galeria_item img { width: auto; max-width: 180px; height: auto; display: block; }
         }
     </style>
 </head>
 <body>
 
-<h2>TRAMITES CIUDADANOS ADMINISTRATIVOS BASICOS</h2>
+<h2>TRÁMITES CIUDADANOS ADMINISTRATIVOS BÁSICOS</h2>
 
-<section class="gal"><br>
+<section class="gal">
     <main id="galeria" class="galeria">
         <div class="galeria_item">
             <a href="solicitudecurp.png" data-lightbox="models" data-title="imagen1">
@@ -130,6 +133,8 @@
 
 </body>
 </html>
+
+
 
 
 
