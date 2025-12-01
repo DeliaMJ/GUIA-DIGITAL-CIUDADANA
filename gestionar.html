@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
    <meta charset="UTF-8">
@@ -16,22 +16,40 @@
          padding: 0;
       }
 
+      /* 🔵 MENÚ PRINCIPAL */
       nav {
          background-color: #1b4965;
          padding: 15px 0;
          text-align: center;
+         width: 100%;
+      }
+
+      nav input[type="search"] {
+         padding: 6px 10px;
+         border-radius: 5px;
+         border: none;
+         margin-right: 5px;
+      }
+
+      nav input[type="submit"] {
+         padding: 6px 10px;
+         border-radius: 5px;
+         border: none;
+         background-color: #ffd60a;
+         font-weight: 600;
+         cursor: pointer;
       }
 
       ul {
          list-style: none;
          padding: 0;
-         margin: 0;
+         margin: 10px 0 0 0;
       }
 
       li {
          display: inline-block;
          position: relative;
-         margin: 0 15px;
+         margin: 0 12px;
       }
 
       p, a {
@@ -52,6 +70,8 @@
          border-radius: 5px;
          padding: 10px;
          list-style: none;
+         z-index: 30;
+         width: 180px;
       }
 
       li:hover ul {
@@ -71,29 +91,47 @@
       ul ul li a:hover {
          color: #ffd60a;
       }
+
+      /* 📱 Ajuste del menú en celulares */
+      @media (max-width: 700px) {
+         li {
+            display: block;
+            margin: 10px 0;
+         }
+
+         nav input[type="search"],
+         nav input[type="submit"] {
+            width: 90%;
+            margin-bottom: 10px;
+         }
+
+         ul ul {
+            position: relative;
+            width: 100%;
+         }
+      }
    </style>
 </head>
 
+
 <body>
-   <!--menu principal-->
+
+   <!-- 🔵 MENÚ PRINCIPAL -->
    <nav>
+      <form method="get" action="https://www.google.com/search" target="_blank">
+         <input type="search" name="q" placeholder="Introducir búsqueda" autofocus required>
+         <input type="submit" value="Buscar">
+      </form>
+
       <ul>
-          <form method="get" action="https://www.google.com/search" target="_blank">
-    <input type="search" name="q" placeholder="Introducir búsqueda" autofocus required>
-    <input type="submit">
-         <!--elemento simple sin subtema-->
-         
-         <!--Elemento con subtema-->
          <li>
-            <p><a href="https://gobmx.page/ActaNacimiento/">ACTA</a></p> <!--Flecha indicando subtema-->
+            <p><a href="https://gobmx.page/ActaNacimiento/">ACTA</a></p>
             <ul>
                <li><a href="https://www.gob.mx/ActaNacimiento/folioSeguimiento/">ACTA FOLIO</a></li>
             </ul>
          </li>
 
-         <li>
-            <p><a href="https://www.gob.mx/curp/">CURP</a></p> <!--Flecha indicando subtema-->
-         </li>
+         <li><p><a href="https://www.gob.mx/curp/">CURP</a></p></li>
 
          <li>
             <p><a href="https://smovilidad.edomex.gob.mx/licencias">LICENCIA</a></p>
@@ -103,172 +141,128 @@
          </li>
 
          <li>
-            <p><a href="https://www.sat.gob.mx/portal/public/home">SAT</a></p> <!--Flecha indicando subtema-->
+            <p><a href="https://www.sat.gob.mx/portal/public/home">SAT</a></p>
             <ul>
                <li><a href="https://citas.sat.gob.mx/">AGENDAR CITA</a></li>
                <li><a href="https://share.google/kg2M34giuzqjyeFCn">RFC</a></li>
-               <li><a href="https://www.sat.gob.mx/portal/public/tramites/constancia-de-situacion-fiscal">CONSTANCIA DE SITUACION FISCAL</a></li>
-               <li><a href="https://www.sat.gob.mx/portal/public/tramites/declaraciones-pf">DECLARACION PERSONAS FISICAS</a></li>
+               <li><a href="https://www.sat.gob.mx/portal/public/tramites/constancia-de-situacion-fiscal">CONSTANCIA</a></li>
+               <li><a href="https://www.sat.gob.mx/portal/public/tramites/declaraciones-pf">DECLARACIÓN PF</a></li>
             </ul>
          </li>
 
-         <li>
-            <p><a href="https://share.google/bEhPbZOFD9ReqhYrG">REGISTRO CIVIL</a></p> <!--Flecha indicando subtema-->
-         </li>
-        
+         <li><p><a href="https://share.google/bEhPbZOFD9ReqhYrG">REGISTRO CIVIL</a></p></li>
 
-         <li>
-            <p><a href="https://www.gob.mx/pasaporte/">PASAPORTE</a></p> <!--Flecha indicando subtema-->
-         </li>
-
+         <li><p><a href="https://www.gob.mx/pasaporte/">PASAPORTE</a></p></li>
       </ul>
    </nav>
 
 
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Documentos importantes</title>
+   <!-- 🌸 DOCUMENTOS IMPORTANTES -->
+   <header style="text-align:center; padding:20px;">
+      <h1 style="color:#ff6f91;">✨ Documentos importantes ✨</h1>
+      <p style="color:#777;">Información breve y clara sobre algunos documentos oficiales en México.</p>
+   </header>
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+   <main class="contenedor">
+      <style>
+         /* 🎀 ESTILO DE TARJETAS */
+         :root {
+            --color-fondo: #fff6f9;
+            --color-tarjeta: #ffffff;
+            --color-acento: #f8b6c2;
+            --color-acento-suave: #ffe0e6;
+            --color-texto: #444;
+            --color-titulo: #ff6f91;
+            --sombra: 0 4px 10px rgba(255, 182, 193, 0.25);
+            --radio: 15px;
+         }
 
-  <style>
-    /* 💗 Colores pastel y tipografía redondeada */
-    :root {
-      --color-fondo: #fff6f9;
-      --color-tarjeta: #ffffff;
-      --color-acento: #f8b6c2;
-      --color-acento-suave: #ffe0e6;
-      --color-texto: #444;
-      --color-titulo: #ff6f91;
-      --sombra: 0 4px 10px rgba(255, 182, 193, 0.25);
-      --radio: 15px;
-    }
+         body {
+            background-color: var(--color-fondo);
+         }
 
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background-color: var(--color-fondo);
-      color: var(--color-texto);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 30px 20px;
-    }
+         .contenedor {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            padding: 20px;
+            max-width: 1100px;
+            width: 100%;
+            margin: auto;
+         }
 
-    header {
-      text-align: center;
-      margin-bottom: 40px;
-    }
+         .tarjeta {
+            background: var(--color-tarjeta);
+            border-radius: var(--radio);
+            box-shadow: var(--sombra);
+            padding: 20px;
+         }
 
-    header h1 {
-      color: var(--color-titulo);
-      font-size: 28px;
-      margin-bottom: 5px;
-    }
+         .tarjeta img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: var(--radio);
+            background: var(--color-acento-suave);
+         }
 
-    header p {
-      color: #777;
-      font-size: 15px;
-    }
+         .tarjeta h2 {
+            color: var(--color-titulo);
+            font-size: 18px;
+         }
 
-    .contenedor {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
-      max-width: 1100px;
-      width: 100%;
-    }
+         /* 📱 Ajuste en celulares para evitar desbordes */
+         @media (max-width: 450px) {
+            .contenedor {
+               grid-template-columns: 1fr;
+            }
+            .tarjeta img {
+               height: 140px;
+            }
+         }
+      </style>
 
-    .tarjeta {
-      background-color: var(--color-tarjeta);
-      border-radius: var(--radio);
-      box-shadow: var(--sombra);
-      padding: 20px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
+      <!-- TARJETAS -->
+      <div class="tarjeta">
+         <img src="aqui.jpg">
+         <h2>⁕ACTA DE NACIMIENTO</h2>
+         <p>Es el documento que certifica tu nacimiento, tus datos personales y de tus padres.</p>
+      </div>
 
-    .tarjeta:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 8px 20px rgba(255, 182, 193, 0.3);
-    }
+      <div class="tarjeta">
+         <img src="CURP1.jpg">
+         <h2>⁕CURP</h2>
+         <p>Te identifica oficialmente en México. Se usa en escuelas, trabajos y trámites.</p>
+      </div>
 
-    .tarjeta img {
-      width: 100%;
-      height: 160px;
-      object-fit: cover;
-      border-radius: var(--radio);
-      margin-bottom: 15px;
-      background-color: var(--color-acento-suave);
-    }
+      <div class="tarjeta">
+         <img src="licenciadeconducir.jpg">
+         <h2>⁕LICENCIA DE CONDUCIR</h2>
+         <p>Documento que te autoriza a manejar y también sirve como identificación.</p>
+      </div>
 
-    .tarjeta h2 {
-      color: var(--color-titulo);
-      font-size: 20px;
-      margin-bottom: 8px;
-    }
+      <div class="tarjeta">
+         <img src="sat.jpg">
+         <h2>⁕SAT</h2>
+         <p>Institución encargada de los impuestos y del RFC en México.</p>
+      </div>
 
-    .tarjeta p {
-      font-size: 15px;
-      line-height: 1.5;
-    }
+      <div class="tarjeta">
+         <img src="registro.jpg">
+         <h2>⁕REGISTRO CIVIL</h2>
+         <p>Registra nacimientos, matrimonios y defunciones.</p>
+      </div>
 
-    footer {
-      margin-top: 40px;
-      font-size: 13px;
-      color: #999;
-      text-align: center;
-    }
-  </style>
-</head>
+      <div class="tarjeta">
+         <img src="pasaporte.jpg">
+         <h2>⁕PASAPORTE</h2>
+         <p>Documento para viajar fuera del país e identificación internacional.</p>
+      </div>
 
-<body>
-  <header>
-   </body>
-</html>
+   </main>
 
-    <h1>✨ Documentos importantes ✨</h1>
-    <p>Información breve y clara sobre algunos documentos oficiales en México.</p>
-  </header>
-
-  <main class="contenedor">
-    <div class="tarjeta">
-      <img src="aqui.jpg">
-      <h2>⁕ACTA DE NACIMIENTO</h2>
-      <h2>Es el documento que certifica tu nacimiento, tus datos personales y de tus padres. Sirve como prueba legal de tu identidad.</h2>
-    </div>
-
-    <div class="tarjeta">
-      <img src="CURP1.jpg">
-      <h2>⁕CURP</h2>
-      <h2>La CURP (Clave Única de Registro de Población) te identifica oficialmente en todo México. Se usa en escuelas, trabajos y trámites.</h2>
-    </div>
-
-    <div class="tarjeta">
-      <img src="licenciadeconducir.jpg">
-      <h2>⁕LICENCIA DE CONDUCIR</h2>
-      <h2>Documento que te autoriza a manejar un vehículo. También puede usarse como identificación oficial.</h2>
-    </div>
-
-    <div class="tarjeta">
-      <img src="sat.jpg">
-      <h2>⁕SAT</h2>
-      <h2>El SAT (Servicio de Administración Tributaria) es la institución que se encarga de los impuestos y el RFC en México.</h2>
-    </div>
-
-    <div class="tarjeta">
-      <img src="registro.jpg">
-      <h2>⁕REGISTRO CIVIL</h2>
-      <h2>Es la oficina donde se registran los nacimientos, matrimonios y defunciones. De ahí se obtienen actas oficiales.</h2>
-    </div>
-
-    <div class="tarjeta">
-      <img src="pasaporte.jpg">
-      <h2>⁕PASAPORTE</h2>
-      <h2>Documento que te permite viajar fuera del país. También sirve como identificación internacional.</h2>
-    </div>
-  </main>
 </body>
 </html>
+
+
 
