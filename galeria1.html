@@ -6,8 +6,7 @@
     <title>Plantel Valle de Bravo</title>
     <link rel="stylesheet" href="principal.css">
     <link rel="icon" href="valle.png" type="png">
-    <a href="OPDAPAS.html"></a>
- 
+
     <style>
         .fondo-valle{
             background-image: linear-gradient(to top, #0593bb 20%, #0e26ae 80%);
@@ -31,33 +30,12 @@
             50% { transform: translateX(-25%) translateZ(0) scaleY(0.55) }
             100% { transform: translateX(-50%) translateZ(0) scaleY(1) }
         }
-        .waveWrapper {
-            overflow: hidden;
-            position: absolute;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            top: 0;
-            margin: auto;
-        }
-        .waveWrapperInner {
-            position: absolute;
-            width: 100%;
-            overflow: hidden;
-            height: 70%;
-        }
+        .waveWrapper { overflow: hidden; position: absolute; left: 0; right: 0; bottom: 0; top: 0; margin: auto; }
+        .waveWrapperInner { position: absolute; width: 100%; overflow: hidden; height: 70%; }
         .bgTop { z-index: 15; opacity: 0.5; }
         .bgMiddle { z-index: 10; opacity: 0.75; }
         .bgBottom { z-index: 5; }
-        .wave {
-            position: absolute;
-            left: 0;
-            width: 200%;
-            height: 100%;
-            background-repeat: repeat no-repeat;
-            background-position: 0 bottom;
-            transform-origin: center bottom;
-        }
+        .wave { position: absolute; left: 0; width: 200%; height: 100%; background-repeat: repeat no-repeat; background-position: 0 bottom; transform-origin: center bottom; }
         .waveTop { background-size: 50% 100px; }
         .waveAnimation .waveTop { animation: move-wave 3s; -webkit-animation: move-wave 3s; -webkit-animation-delay: 1s; animation-delay: 1s; }
         .waveMiddle { background-size: 50% 120px; }
@@ -65,33 +43,29 @@
         .waveBottom { background-size: 50% 100px; }
         .waveAnimation .waveBottom { animation: move_wave 15s linear infinite; }
 
-        /* ----------- AJUSTE RESPONSIVO ------------ */
-        @media (max-width: 480px) {
-            h2 { font-size: 28px; margin-top: 40px; }
-            .content-all { width: 150px; margin-top: 30px; }
+        /* AJUSTE RESPONSIVO PARA MÓVILES */
+        @media (max-width: 768px) {
+            h2 { font-size: 28px; margin-top: 40px; text-align: center; }
+            .content-all { width: 180px; margin-top: 30px; }
             .content-carrousel { width: 100%; transform: scale(0.7); }
-            .content-carrousel figure { height: 120px; }
+            .content-carrousel figure { height: auto; min-height: 120px; }
+            .content-carrousel img { width: 100%; height: auto; object-fit: contain; }
             .gallery2 { width: 95%; height: auto; flex-direction: column; }
-            .content-carrousel img { width: 100%; height: auto; object-fit: cover; }
             .inner-header { height: 40vh; }
-            .agua { height: 10vh; min-height: 60px; }
+            .agua { height: 12vh; min-height: 60px; }
         }
 
-        @media (min-width: 481px) and (max-width: 768px) {
-            h2 { font-size: 36px; margin-top: 60px; }
-            .content-all { width: 180px; margin-top: 40px; }
-            .content-carrousel { width: 80%; transform: scale(0.85); }
-            .content-carrousel figure { height: 150px; }
-            .gallery2 { width: 90%; height: auto; }
-            .content-carrousel img { width: 100%; height: auto; object-fit: cover; }
-            .inner-header { height: 50vh; }
-            .agua { height: 12vh; min-height: 80px; }
+        @media (max-width: 480px) {
+            h2 { font-size: 24px; margin-top: 30px; }
+            .content-all { width: 150px; margin-top: 20px; }
+            .content-carrousel { width: 100%; transform: scale(0.6); }
+            .content-carrousel figure { min-height: 100px; }
+            .content-carrousel img { width: 100%; height: auto; object-fit: contain; }
+            .gallery2 { width: 95%; height: auto; flex-direction: column; }
+            .inner-header { height: 35vh; }
+            .agua { height: 10vh; min-height: 50px; }
         }
     </style>
-      
-    <script>
-        window.console = window.console || function(t) {};
-    </script>
 </head>
 <body>
     <div class="header">
@@ -99,18 +73,18 @@
             <div class="logo"></div>
         </div>
         <div>
-        <svg class="agua" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-        viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-            <defs>
-                <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-            </defs>
-            <g class="parallax">
-                <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
-                <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
-                <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
-                <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
-            </g>
-        </svg>
+            <svg class="agua" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+                </g>
+            </svg>
         </div>
     </div>
 
@@ -135,7 +109,9 @@
 
     <div class="separador"></div>
 </body>
-</html> 
+</html>
+
+
 
 
 
