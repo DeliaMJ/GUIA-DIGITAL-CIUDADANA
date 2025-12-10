@@ -1,15 +1,176 @@
-<!DOCTYPE HTML><!--doc en html-->
-<HTML LANG="ES"><!--doc en español-->
-<HEAD>
-<meta charset="UFT-8"><!--codifica caracteres-->
-<meta neme="viewport" content="width=device-width, initial-scale=1.0"><!--ajusta el diseño a moviles-->
-<title> SOLICITUD</title><!--titulo que aparece en la pestaña-->
-<style>
- <body {
- 	 margin: 0; /*elimina margenes por defecto */
-    font-family:Arial, sans-serif;/*fuente de texto */
-    }
-/*estilo del menu principal */
-nav{
-   background: #333;/*fondo gris oscuro */
-}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitud de Información</title>
+
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+            background: #f9f5ff;
+            margin: 0;
+            padding: 0;
+            color: #444;
+        }
+
+        header {
+            background: #dcd6f7;
+            padding: 20px;
+            text-align: center;
+            color: #4a4a4a;
+            border-bottom: 3px solid #b8b1e0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 900px;
+            margin: 40px auto;
+            background: #ffffffcc;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px #e2dbff;
+        }
+
+        h2, h3 {
+            color: #7b6dcd;
+        }
+
+        ul, ol {
+            line-height: 1.6;
+        }
+
+        .media-box {
+            background: #f7eefc;
+            padding: 20px;
+            border-radius: 12px;
+            margin-top: 20px;
+            border: 2px dashed #c3b8e0;
+            text-align: center;
+        }
+
+        img, video {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            padding: 15px;
+            background: #e8e0ff;
+            color: #555;
+            border-top: 3px solid #b8b1e0;
+        }
+
+        /* -------------------------------------------------- */
+        /*  RESPONSIVIDAD PARA DISPOSITIVOS MÓVILES          */
+        /* -------------------------------------------------- */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 22px;
+            }
+
+            .container {
+                padding: 15px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            h3 {
+                font-size: 18px;
+            }
+
+            body {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Solicitud de Información General</h1>
+    </header>
+
+    <div class="container">
+        <h2>Detalles de la Solicitud</h2>
+        <p>
+            Esta solicitud permite recopilar información importante para validar al solicitante 
+            y asegurar que los datos proporcionados sean precisos. El objetivo es facilitar un 
+            proceso rápido, seguro y eficiente.
+        </p>
+
+        <h3>Datos Necesarios</h3>
+        <ul>
+            <li><strong>Nombre completo:</strong> Como aparece en su identificación oficial.</li>
+            <li><strong>Correo electrónico:</strong> Debe ser uno activo, ya que ahí recibirá confirmación.</li>
+            <li><strong>Número de contacto:</strong> Teléfono móvil o fijo para comunicación directa.</li>
+            <li><strong>Motivo de la solicitud:</strong> Explicar brevemente el propósito.</li>
+            <li><strong>Documentos adjuntos:</strong> Identificación oficial y documentos adicionales si son requeridos.</li>
+        </ul>
+
+        <h3>Recomendaciones</h3>
+        <ul>
+            <li>Verifique que su información personal coincida con la de sus documentos.</li>
+            <li>Asegúrese de que los archivos adjuntos sean legibles y no excedan el tamaño permitido.</li>
+            <li>Use un correo que revise frecuentemente.</li>
+            <li>Evite dejar campos sin completar para acelerar el proceso.</li>
+        </ul>
+
+        <h3>Proceso de Solicitud</h3>
+        <ol>
+            <li>Complete todos los campos del formulario correctamente.</li>
+            <li>Adjunte los documentos solicitados en formato PDF o imagen.</li>
+            <li>Revise que toda la información sea correcta antes de enviar.</li>
+            <li>Envíe la solicitud y espere la confirmación por correo electrónico.</li>
+            <li>Si es necesario, un representante se comunicará con usted.</li>
+        </ol>
+
+        <h3>Tiempos de Respuesta</h3>
+        <p>
+            El tiempo estimado para recibir una respuesta es de entre 
+            <strong>24 a 72 horas hábiles</strong>. Si la solicitud necesita análisis detallado, 
+            el tiempo puede extenderse. Agradecemos su paciencia.
+        </p>
+
+        <h3>Preguntas Frecuentes</h3>
+        <p><strong>¿Qué pasa si mis documentos no son legibles?</strong><br>
+            El sistema podría rechazar la solicitud y se le pedirá reenviar los archivos.
+        </p>
+        <p><strong>¿Puedo actualizar mis datos después de enviarlos?</strong><br>
+            Sí, comunicándose con soporte y proporcionando su número de referencia.
+        </p>
+        <p><strong>¿Mi información es segura?</strong><br>
+            Sí, aplicamos medidas de protección y cifrado para resguardar sus datos.</p>
+
+        <h3>Política de Privacidad</h3>
+        <p>
+            La información proporcionada será utilizada únicamente con fines administrativos 
+            y no será compartida con terceros sin autorización expresa del solicitante.
+        </p>
+
+        <h2>Espacio para Imagen</h2>
+        <div class="media-box">
+            <p>Aquí puedes insertar una imagen ilustrativa o un ejemplo de documento.</p>
+            <img src="#" alt="Imagen de ejemplo">
+        </div>
+
+        <h2>Espacio para Video</h2>
+        <div class="media-box">
+            <p>Incluya aquí un video explicando el proceso o dando instrucciones adicionales.</p>
+            <video src="#" controls>
+                Tu navegador no soporta la reproducción de video.
+            </video>
+        </div>
+    </div>
+
+    <footer>
+        © 2025 Información de Solicitud - Documento en colores pasteles
+    </footer>
+
+</body>
+</html>
